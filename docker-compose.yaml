@@ -1,0 +1,32 @@
+# CTF学习交流Web入群题
+# Author : Virink
+version: "3"
+services:
+
+  web1:
+    build: ./web1
+    volumes:
+      - ./logs:/var/log/nginx
+    networks:
+      ctf473831530:
+        ipv4_address: 172.16.233.111
+    restart: always
+
+  web2:
+    build: ./web2
+    ports:
+      - "127.0.0.1:10002:80"
+    volumes:
+      - ./logs:/var/log/nginx
+    networks:
+      ctf473831530:
+        ipv4_address: 172.16.233.222
+    restart: always
+
+networks:
+  ctf473831530:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.233.0/24
