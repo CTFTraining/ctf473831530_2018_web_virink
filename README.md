@@ -16,6 +16,10 @@ then, you can open http://473831530.local.virzz.com for it
 
 	A *.local.virzz.com 127.0.0.1
 
+## ChangeLog
+
+- Add DockerHub Repo [2018-10-15]
+
 ## LICENSE
 
 [MIT License](LICENSE)
