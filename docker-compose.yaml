@@ -4,7 +4,7 @@ version: "3"
 services:
 
   web1:
-    image: ctftraining/ctf473831530:web1
+    image: ctftraining/ctf473831530_2018_web_virink:web1
     # build: ./web1
     volumes:
       - ./logs:/var/log/nginx
@@ -14,7 +14,7 @@ services:
     restart: always
 
   web2:
-    image: ctftraining/ctf473831530:web2
+    image: ctftraining/ctf473831530_2018_web_virink:web2
     # build: ./web2
     ports:
       - "127.0.0.1:10002:80"
