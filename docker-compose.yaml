@@ -4,18 +4,20 @@ version: "3"
 services:
 
   web1:
-    image: ctftraining/ctf473831530_2018_web_virink:web1
-    # build: ./web1
+    image: ctftraining/ctf473831530_2018_web_virink_web1
+    build: ./web1
     volumes:
       - ./logs:/var/log/nginx
     networks:
       ctf473831530:
         ipv4_address: 172.16.233.111
     restart: always
+    environment:
+      - FLAG=flag{test_flag}
 
   web2:
-    image: ctftraining/ctf473831530_2018_web_virink:web2
-    # build: ./web2
+    image: ctftraining/ctf473831530_2018_web_virink_web2
+    build: ./web2
     ports:
       - "127.0.0.1:10002:80"
     volumes:

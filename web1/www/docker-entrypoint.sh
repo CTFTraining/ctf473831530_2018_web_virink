@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo $FLAG > /7h1s_i5_f14g
+export FLAG=not_flag
+FLAG=not_flag
+
 set -ex
 
 chmod -r /var/log/nginx

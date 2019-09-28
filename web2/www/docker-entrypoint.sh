@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export FLAG=not_flag
+FLAG=not_flag
+
 set -ex
 
 chmod -r /www/sandbox
